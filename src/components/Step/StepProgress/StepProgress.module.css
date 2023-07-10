@@ -1,0 +1,144 @@
+.progress__title {
+  display: flex;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  color: var(--main-text);
+  margin: 10px 15px;
+}
+
+.progress__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 48px;
+  text-align: center;
+}
+
+.progress__group {
+  display: flex;
+}
+
+.progress__bar {
+  display: flex;
+  flex-grow: 1;
+  max-width: 60px;
+  height: 1px;
+  margin: 0px 8px;
+  border: 1.5px solid var(--done-progress-border);
+  background-color: var(--done-progress-border);
+}
+
+.progress__bar__undone {
+  display: flex;
+  flex-grow: 1;
+  max-width: 60px;
+  height: 1px;
+  margin: 0px 8px;
+  border: 1.5px solid var(--undone-progress-border);
+  background-color: var(--undone-progress-border);
+}
+
+.progress__circle {
+  display: inline-block;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  border-radius: 50%;
+}
+
+.progress__circle__done {
+  display: inline-block;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  border-radius: 50%;
+  color: var(--undone-progress-border);
+  background-color: var(--pg-addr-bg-color);
+  border: 1px solid var(--pg-addr-bg-color);
+}
+
+.progress__circle__undone {
+  display: inline-block;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  border-radius: 50%;
+  color: var(--progress-undone-color);
+  background-color: transparent;
+  border: 1px solid var(--progress-undone-color);
+}
+
+.progress__text {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+}
+
+.progress__label {
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.progress__label__done {
+  visibility: visible;
+  position: static;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--progress-current-color);
+}
+
+.progress__label__undone {
+  visibility: visible;
+  position: static;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--progress-undone-color);
+}
+
+.icon {
+  width: inherit;
+  height: inherit;
+}
+
+@media screen and (max-width: 500px) {
+  .progress__label__done {
+    visibility: hidden;
+    position: absolute;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--progress-current-color);
+  }
+
+  .progress__label__undone {
+    visibility: hidden;
+    position: absolute;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--progress-undone-color);
+  }
+
+  .progress__bar {
+    display: flex;
+    flex-grow: 1;
+    max-width: 60px;
+    height: 1px;
+    margin: 0px 8px;
+    border: 1.5px solid var(--done-progress-border);
+    background-color: var(--done-progress-border);
+  }
+
+  .progress__bar__undone {
+    display: flex;
+    flex-grow: 1;
+    max-width: 60px;
+    height: 1px;
+    margin: 0px 8px;
+    border: 1.5px solid var(--undone-progress-border);
+    background-color: var(--undone-progress-border);
+  }
+}

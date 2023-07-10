@@ -1,0 +1,78 @@
+.form__container {
+  margin-top: 64px;
+}
+
+.form__title {
+  display: flex;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.form__body {
+  height: 270px;
+  margin-top: 25px;
+}
+
+.input__container,
+.input__container__3 {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr;
+  gap: 30px;
+  margin-top: 24px;
+}
+
+:global(.card__name),
+:global(.card__number) {
+  grid-column: 1/7;
+  width: 100%;
+}
+
+:global(.card__date) {
+  grid-column: 1/4;
+}
+
+:global(.card__cvc) {
+  grid-column: 4/7;
+}
+
+.input__label {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--input-label);
+  margin-bottom: 8px;
+}
+
+:global(.card__name > input),
+:global(.card__number > input) {
+  height: 40px;
+  width: 65%;
+}
+
+:global(.card__date > input),
+:global(.card__cvc > input) {
+  width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+  .input__container__3 {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
+    gap: 30px;
+    margin-top: 25px;
+  }
+  .card__name,
+  .card__number {
+    width: 100%;
+  }
+  :global(.card__name > input),
+  :global(.card__number > input) {
+    height: 40px;
+    width: 100%;
+  }
+}
