@@ -1,11 +1,11 @@
-# AC-Shop
+# ALPHA-Shop
 
-ALPHA Shop I
+ALPHA Shop II
 
 ## 專案畫面 Presentation Project
 
-![MyImage](https://github.com/akedaikuki/ALPHA-shopI/blob/main/Photo/ReactApp.png)
-![MyImage](https://github.com/akedaikuki/ALPHA-shopI/blob/main/Photo/ReactApp2.png)
+![MyImage](https://github.com/akedaikuki/ALPHA-shopI/blob/main/Photo/ReactAppII.png)
+![MyImage](https://github.com/akedaikuki/ALPHA-shopI/blob/main/Photo/ReactAppII2.png)
 
 ### 專案開發環境 Development Environment
 
@@ -23,7 +23,7 @@ ALPHA Shop I
 - Step2. 下載專案
 
 ```bash
-git clone https://github.com/akedaikuki/ALPHA-shopI.git
+git clone https://github.com/akedaikuki/ALPHA-shop.git
 ```
 
 - Step3. 終端機輸入
