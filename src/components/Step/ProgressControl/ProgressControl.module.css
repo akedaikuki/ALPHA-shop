@@ -26,6 +26,7 @@
 
 .button[disabled] {
   visibility: hidden;
+  display: none;
 }
 
 .button__prev {
@@ -36,6 +37,36 @@
 }
 
 .button__next {
+  display: flex;
+  align-items: center;
+  height: 46px;
+  width: 174px;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  border-radius: 8px;
+  border-width: 0px;
+  padding: 0px;
+  cursor: pointer;
+  justify-content: center;
+  width: 174px;
+  font-weight: 500;
+  line-height: 17px;
+  background: var(--pink);
+  color: #ffffff;
+  margin-left: auto;
+}
+
+.button__next__one {
+  display: flex;
+  align-items: center;
+  height: 46px;
+  width: 174px;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  border-radius: 8px;
+  border-width: 0px;
+  padding: 0px;
+  cursor: pointer;
   justify-content: center;
   width: 174px;
   font-weight: 500;
@@ -72,7 +103,7 @@
     border-top: 1px solid #e6e6eb;
   }
 
-  /* .button__next {
+  .button__next__one {
     width: 100%;
-  } */
+  }
 }

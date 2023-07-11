@@ -8,7 +8,7 @@ function ProgressControl({ clickPrev, clickNext }) {
 
   return (
     <section className={styles.control__container}>
-      <section className={styles.button__group} data-phase="address">
+      <section className={styles.button__group}>
         <button
           onClick={clickPrev}
           disabled={nowStep === 1 && true}
@@ -19,7 +19,9 @@ function ProgressControl({ clickPrev, clickNext }) {
         </button>
         <button
           onClick={clickNext}
-          className={[styles.button__next, styles.button].join(" ")}
+          className={
+            nowStep === 1 ? styles.button__next__one : styles.button__next
+          }
         >
           <div className={styles.button__text}>
             {nowStep === 3 ? "準備結帳" : "下一步"}
