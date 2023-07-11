@@ -11,9 +11,9 @@ function ItemList({ items }) {
         <div className={styles.item__name}>{item.name}</div>
         <div className={styles.item__control__container}>
           <div className={styles.item__control}>
-            <PlusBtn className={styles.item__control__btn} />
-            <span className={styles.item__count}>{item.quantity}</span>
             <MinusBtn className={styles.item__control__btn} />
+            <span className={styles.item__count}>{item.quantity}</span>
+            <PlusBtn className={styles.item__control__btn} />
           </div>
         </div>
         <div className={styles.item__price}>${item.price}</div>
