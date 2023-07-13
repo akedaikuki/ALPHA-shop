@@ -26,7 +26,7 @@ function Step2() {
           <RadioGroup
             price="0"
             id="standard"
-            checked={true}
+            checked={false}
             name="標準運送"
             priceText="免費"
             period="約 3~7 個工作天"
@@ -36,7 +36,7 @@ function Step2() {
           <RadioGroup
             price="500"
             id="DHL"
-            checked={false}
+            checked={true}
             name="DHL貨運"
             priceText="$500"
             period="48小時內送達"

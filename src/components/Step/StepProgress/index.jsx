@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./StepProgress.module.css";
+import { ReactComponent as CheckIcon } from "../../../icons/pg-complete.svg";
 
 function Step({ nowStep, step, label }) {
   return (
@@ -11,7 +12,7 @@ function Step({ nowStep, step, label }) {
             : styles.progress__circle__undone
         }
       >
-        {nowStep > step ? <div className={styles.icon} /> : step}
+        {nowStep > step ? <CheckIcon className={styles.icon} /> : step}
       </span>
       <span
         className={
@@ -30,8 +31,7 @@ function ProgressBar({ className }) {
   return <span className={className}></span>;
 }
 
-function StepProgress() {
-  const nowStep = 1;
+function StepProgress({ nowStep }) {
   return (
     <div className={styles.progress}>
       <h2 className={styles.progress__title}>結帳</h2>

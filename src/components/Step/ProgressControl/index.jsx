@@ -3,9 +3,7 @@ import { ReactComponent as RightArrow } from "../../../icons/right-arrow.svg";
 
 import styles from "./ProgressControl.module.css";
 
-function ProgressControl({ clickPrev, clickNext }) {
-  const nowStep = 1;
-
+function ProgressControl({ clickPrev, clickNext, nowStep }) {
   return (
     <section className={styles.control__container}>
       <section className={styles.button__group}>
