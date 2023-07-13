@@ -4,8 +4,8 @@ ALPHA Shop III
 
 ## 專案畫面 Presentation Project
 
-![MyImage](https://github.com/akedaikuki/ALPHA-shop/blob/main/Photo/ReactAppIII.png)
-![MyImage](https://github.com/akedaikuki/ALPHA-shop/blob/main/Photo/ReactAppIII2.png)
+![MyImage](https://github.com/akedaikuki/ALPHA-shop/blob/main/Photo/ReactAppIII.PNG)
+![MyImage](https://github.com/akedaikuki/ALPHA-shop/blob/main/Photo/ReactAppIII2.PNG)
 
 ### 專案開發環境 Development Environment
 
