@@ -39,20 +39,13 @@
   background-color: var(--undone-progress-border);
 }
 
-.progress__circle {
-  display: inline-block;
-  position: relative;
-  width: 24px;
-  height: 24px;
-  margin-right: 8px;
-  border-radius: 50%;
-}
-
 .progress__circle__done {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  width: 24px;
-  height: 24px;
+  width: 25px;
+  height: 25px;
   margin-right: 8px;
   border-radius: 50%;
   color: var(--undone-progress-border);
@@ -61,27 +54,17 @@
 }
 
 .progress__circle__undone {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  width: 24px;
-  height: 24px;
+  width: 25px;
+  height: 25px;
   margin-right: 8px;
   border-radius: 50%;
   color: var(--progress-undone-color);
   background-color: transparent;
   border: 1px solid var(--progress-undone-color);
-}
-
-.progress__text {
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 24px;
-  text-align: center;
-}
-
-.progress__label {
-  font-weight: 400;
-  line-height: 24px;
 }
 
 .progress__label__done {

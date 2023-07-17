@@ -28,6 +28,7 @@
   width: 100px;
   height: 100px;
   margin-right: 21px;
+  border-radius: 6%;
 }
 
 .item__info {

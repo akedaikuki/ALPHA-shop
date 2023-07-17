@@ -2,10 +2,7 @@ import styles from "./Cart.module.css";
 import itemsData from "./CartData";
 import { ReactComponent as PlusBtn } from "../../icons/plus.svg";
 import { ReactComponent as MinusBtn } from "../../icons/minus.svg";
-import {
-  useState,
-  // useEffect
-} from "react";
+import { useState } from "react";
 
 function ItemList({ items, minus, plus }) {
   const totalItems = items.map((item) => (
@@ -33,25 +30,8 @@ function ItemList({ items, minus, plus }) {
   return <section className={styles.item__list}>{totalItems}</section>;
 }
 
-function CartInfo({ text, price }) {
-  return (
-    <section className={styles.cart__info}>
-      <div className={styles.cart__text}>{text}</div>
-      <div className={styles.cart__price}>{price === 0 ? "免費" : price}</div>
-    </section>
-  );
-}
-
-function Cart() {
+function Cart({ shippingCost }) {
   const [nowItems, setNowtItems] = useState(itemsData);
-  // 暫時設定使用 DHL貨運運費
-  const price = 500;
-  const [shippingCost, setShippingCost] = useState(price);
-
-  const costChange = () => {
-    setShippingCost((curr) => (curr === 500 ? 0 : 500));
-  };
-  // useEffect(() => {}, [shippingCost]);
   const total = function isTotal() {
     let total = 0;
 
@@ -96,10 +76,17 @@ function Cart() {
         items={nowItems}
         plus={handleClickPlus}
         minus={handleClickMinus}
-        onChange={costChange}
       />
-      <CartInfo info={"shipping"} text="運費" price={shippingCost} />
-      <CartInfo info={"total"} text={"小計"} price={total()} />
+      <section className={styles.cart__info}>
+        <div className={styles.cart__text}>運費</div>
+        <div className={styles.cart__price}>
+          {shippingCost === 0 ? "免費" : "$" + shippingCost}
+        </div>
+      </section>
+      <section className={styles.cart__info}>
+        <div className={styles.cart__text}>小計</div>
+        <div className={styles.cart__price}>${total()}</div>
+      </section>
     </section>
   );
 }

@@ -6,21 +6,22 @@ import ProgressControl from "./ProgressControl";
 import styles from "./base.module.css";
 import { useState } from "react";
 
-function Step() {
+function Step({ clickChange, shippingCost }) {
   const [nowStep, setNowStep] = useState(1);
-
   function handleClickNext() {
     if (nowStep < 3) setNowStep(nowStep + 1);
   }
-
   function handleClickPrev() {
     if (nowStep > 1) setNowStep(nowStep - 1);
   }
+
   return (
     <div className={styles.steplist}>
       <StepProgress nowStep={nowStep} />
       {nowStep === 1 && <Step1 />}
-      {nowStep === 2 && <Step2 />}
+      {nowStep === 2 && (
+        <Step2 shippingCost={shippingCost} onChange={clickChange} />
+      )}
       {nowStep === 3 && <Step3 />}
       <ProgressControl
         nowStep={nowStep}
