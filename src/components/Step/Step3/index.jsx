@@ -1,7 +1,9 @@
 import React from "react";
 import styles from "./Step3.module.css";
-
+import { useContext } from "react";
+import { FormContext } from "../../Context/FormContext";
 function InputGroup({ id, label, type, placeholder, maxLength, name }) {
+  const { inputChange } = useContext(FormContext);
   return (
     <div className={id}>
       <div className={styles.input__label}>{label}</div>
@@ -10,6 +12,9 @@ function InputGroup({ id, label, type, placeholder, maxLength, name }) {
         placeholder={placeholder}
         maxLength={maxLength}
         name={name}
+        onChange={(e) => {
+          inputChange(e);
+        }}
       />
     </div>
   );

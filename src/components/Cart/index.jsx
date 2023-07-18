@@ -1,8 +1,10 @@
 import styles from "./Cart.module.css";
-import itemsData from "./CartData";
+// import itemsData from "./CartData";
 import { ReactComponent as PlusBtn } from "../../icons/plus.svg";
 import { ReactComponent as MinusBtn } from "../../icons/minus.svg";
-import { useState } from "react";
+import { useContext } from "react";
+import { CartContext } from "../Context/CartContext";
+import { ShippingContext } from "../Context/ShippingContext";
 
 function ItemList({ items, minus, plus }) {
   const totalItems = items.map((item) => (
@@ -30,15 +32,9 @@ function ItemList({ items, minus, plus }) {
   return <section className={styles.item__list}>{totalItems}</section>;
 }
 
-function Cart({ shippingCost }) {
-  const [nowItems, setNowtItems] = useState(itemsData);
-  const total = function isTotal() {
-    let total = 0;
-
-    nowItems.map((item) => (total = total + item.price * item.quantity));
-    return (total = shippingCost === 500 ? total + 500 : total);
-  };
-
+function Cart() {
+  const { nowItems, setNowtItems, total } = useContext(CartContext);
+  const { shippingPrice } = useContext(ShippingContext);
   function handleClickPlus(id) {
     setNowtItems(
       nowItems.map((item) => {
@@ -79,9 +75,7 @@ function Cart({ shippingCost }) {
       />
       <section className={styles.cart__info}>
         <div className={styles.cart__text}>運費</div>
-        <div className={styles.cart__price}>
-          {shippingCost === 0 ? "免費" : "$" + shippingCost}
-        </div>
+        <div className={styles.cart__price}>{shippingPrice}</div>
       </section>
       <section className={styles.cart__info}>
         <div className={styles.cart__text}>小計</div>
