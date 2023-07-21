@@ -5,8 +5,8 @@ import Step3 from "./Step3";
 import ProgressControl from "./ProgressControl";
 import styles from "./base.module.css";
 import { useContext, useState } from "react";
-import { CartContext } from "../Context/CartContext";
-import { FormContext } from "../Context/FormContext";
+import { CartContext } from "../../Context/CartContext";
+import { FormContext } from "../../Context/FormContext";
 
 function Step() {
   const [nowStep, setNowStep] = useState(1);

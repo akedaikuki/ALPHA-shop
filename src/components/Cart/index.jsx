@@ -1,10 +1,10 @@
 import styles from "./Cart.module.css";
 // import itemsData from "./CartData";
-import { ReactComponent as PlusBtn } from "../../icons/plus.svg";
-import { ReactComponent as MinusBtn } from "../../icons/minus.svg";
+import { ReactComponent as PlusBtn } from "../../assets/icons/plus.svg";
+import { ReactComponent as MinusBtn } from "../../assets/icons/minus.svg";
 import { useContext } from "react";
-import { CartContext } from "../Context/CartContext";
-import { ShippingContext } from "../Context/ShippingContext";
+import { CartContext } from "../../Context/CartContext";
+import { ShippingContext } from "../../Context/ShippingContext";
 
 function ItemList({ items, minus, plus }) {
   const totalItems = items.map((item) => (
@@ -75,7 +75,9 @@ function Cart() {
       />
       <section className={styles.cart__info}>
         <div className={styles.cart__text}>運費</div>
-        <div className={styles.cart__price}>{shippingPrice}</div>
+        <div className={styles.cart__price}>
+          {shippingPrice === 0 ? "免費" : `$500`}
+        </div>
       </section>
       <section className={styles.cart__info}>
         <div className={styles.cart__text}>小計</div>

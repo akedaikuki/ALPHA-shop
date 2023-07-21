@@ -1,8 +1,8 @@
 import styles from "./Step2.module.css";
 import { useContext } from "react";
-import { ShippingContext } from "../../Context/ShippingContext";
+import { ShippingContext } from "../../../Context/ShippingContext";
 
-function RadioGroup({ price, id, name, priceText, period, checked }) {
+function RadioGroup({ price, id, name, period, checked }) {
   const { onShippingPrice } = useContext(ShippingContext);
   return (
     <label className={styles.radio__group} data-price={price}>
@@ -18,7 +18,9 @@ function RadioGroup({ price, id, name, priceText, period, checked }) {
       <div className={styles.radio__info}>
         <div className={styles.radio__info__container}>
           <div className={styles.text}>{name}</div>
-          <div className={styles.price}>{priceText}</div>
+          <div className={styles.price}>
+            {price === 0 ? "免費" : `$${price}`}
+          </div>
         </div>
         <div className={styles.period}>{period}</div>
       </div>
@@ -36,21 +38,19 @@ function Step2() {
       <section className={styles.form__body}>
         <div className={styles.radio__group__container}>
           <RadioGroup
-            price="免費"
+            price={0}
             id="standard"
-            checked={shippingPrice === "免費" ? true : false}
+            checked={shippingPrice === 0}
             name="標準運送"
-            priceText="免費"
             period="約 3~7 個工作天"
           />
         </div>
         <div className={styles.radio__group__container}>
           <RadioGroup
-            price="$500"
+            price={500}
             id="DHL"
-            checked={shippingPrice === "$500" ? true : false}
+            checked={shippingPrice === 500}
             name="DHL貨運"
-            priceText="$500"
             period="48小時內送達"
           />
         </div>

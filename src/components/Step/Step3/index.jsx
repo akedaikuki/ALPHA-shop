@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Step3.module.css";
 import { useContext } from "react";
-import { FormContext } from "../../Context/FormContext";
+import { FormContext } from "../../../Context/FormContext";
 function InputGroup({ id, label, type, placeholder, maxLength, name }) {
   const { inputChange } = useContext(FormContext);
   return (

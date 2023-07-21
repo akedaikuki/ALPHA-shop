@@ -2,9 +2,9 @@ import "./App.css";
 import Step from "./components/Step";
 import Cart from "./components/Cart";
 import styles from "./components/Step/base.module.css";
-import { CartContextProvider } from "./components/Context/CartContext";
-import { FormContextProvider } from "./components/Context/FormContext";
-import { ShippingContextProvider } from "./components/Context/ShippingContext";
+import { CartContextProvider } from "./Context/CartContext";
+import { FormContextProvider } from "./Context/FormContext";
+import { ShippingContextProvider } from "./Context/ShippingContext";
 // import Navbar from "./components/Navbar";
 
 function App() {

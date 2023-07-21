@@ -1,5 +1,5 @@
-import { ReactComponent as LeftArrow } from "../../../icons/left-arrow.svg";
-import { ReactComponent as RightArrow } from "../../../icons/right-arrow.svg";
+import { ReactComponent as LeftArrow } from "../../../assets/icons/left-arrow.svg";
+import { ReactComponent as RightArrow } from "../../../assets/icons/right-arrow.svg";
 
 import styles from "./ProgressControl.module.css";
 
@@ -9,7 +9,7 @@ function ProgressControl({ clickPrev, clickNext, nowStep }) {
       <section className={styles.button__group}>
         <button
           onClick={clickPrev}
-          disabled={nowStep === 1 && true}
+          disabled={nowStep === 1}
           className={[styles.button__prev, styles.button].join(" ")}
         >
           <LeftArrow className={styles.arrow__left} />
